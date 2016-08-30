@@ -32,8 +32,6 @@ int main(int argc, char *argv[])
 	matrix_init(&X_INV, N, N);
 	matrix_init(&X_temp, N, N);
 
-	srand((int) time(0));
-
 	for (int i = 0, x = 0; i < M * N; i += N, x++)
 	{
 		for (int j = 0; j < N; j++)
@@ -67,33 +65,6 @@ int main(int argc, char *argv[])
 	matrix_destory(&X);
 	matrix_destory(&Y);
 	matrix_destory(&P);
-
-//	int S = 3;
-//	s_Matrix A;
-//	s_Matrix T;
-//	matrix_init(&A, S, S);
-//	matrix_init(&T, S, S);
-//
-//	A.v[0] = 1;
-//	A.v[1] = -2;
-//	A.v[2] = 1;
-//
-//	A.v[3] = 3;
-//	A.v[4] = 2;
-//	A.v[5] = -2;
-//
-//	A.v[6] = -2;
-//	A.v[7] = 3;
-//	A.v[8] = -2;
-//
-//
-//	matrix_inverse(&T, &A);
-//	matrix_display(&T);
-//
-//	matrix_destory(&A);
-//	matrix_destory(&T);
-//
-//	printf("done.\n");
 
 	return 0;
 }
